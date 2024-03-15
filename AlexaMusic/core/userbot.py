@@ -18,7 +18,6 @@ from ..logging import LOGGER
 from pyrogram.enums import ChatMemberStatus
 
 assistants = []
-assistantids = []
 
 class Userbot(Client):
     def __init__(self):
