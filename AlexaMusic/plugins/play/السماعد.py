@@ -57,7 +57,6 @@ def get_file_id(msg: Message):
 @app.on_message(
     command(["انضم","الحساب المساعد","حساب مساعد"])
     & filters.group
-    & ~filters.edited
 )
 async def khalid(client: Client, message: Message):
     usr = await client.get_users(ASS_ID)
