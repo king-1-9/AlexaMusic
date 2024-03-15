@@ -2,7 +2,7 @@ import asyncio
 from pyrogram import Client, filters
 from strings import get_command
 from strings.filters import command
-from pyrogram.types import Message, VoiceChatStarted, VoiceChatEnded
+from pyrogram.types import Message
 from AlexaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from AlexaMusic import app
 from AlexaMusic.utils.database import get_assistant
