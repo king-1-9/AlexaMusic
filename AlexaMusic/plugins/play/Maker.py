@@ -9,7 +9,6 @@ from AlexaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, ap
 @app.on_message(
     command(["","‹ اوامر التشغيل ›"])
     & filters.group
-    & ~filters.edited
 )
 async def maker(client: Client, message: Message):
     await message.reply_photo(
@@ -50,7 +49,6 @@ async def maker(client: Client, message: Message):
 @app.on_message(
     command(["","‹ اوامر التفعيل ›"])
     & filters.group
-    & ~filters.edited
 )
 async def maker(client: Client, message: Message):
     await message.reply_photo(
@@ -94,7 +92,6 @@ async def maker(client: Client, message: Message):
 @app.on_message(
     command(["",""])
     & filters.group
-    & ~filters.edited
 )
 async def maker(client: Client, message: Message):
     await message.reply_photo(
