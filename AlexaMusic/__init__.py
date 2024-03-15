@@ -10,7 +10,7 @@ as you want or you can collabe if you have new ideas.
 """
 
 
-from AlexaMusic.core.bot import AlexaBot
+from AlexaMusic.core.bot import Alexa
 from AlexaMusic.core.dir import dirr
 from AlexaMusic.core.git import git
 from AlexaMusic.core.userbot import Userbot
@@ -34,7 +34,7 @@ heroku()
 sudo()
 
 # Bot Client
-app = AlexaBot()
+app = Alexa()
 
 # Assistant Client
 userbot = Userbot()
