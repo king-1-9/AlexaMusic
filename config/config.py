@@ -20,7 +20,7 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
-USER_OWNER = getenv("USER_OWNER","IIIlIIv")
+USER_OWNER = getenv("USER_OWNER","IC_19")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "900"))
 
@@ -30,7 +30,7 @@ LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
 
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "乛⁪⁬𝙈𝙐𝙎𝙄𝘾")
 
-OWNER_ID = list(map(int, getenv("OWNER_ID", "6174058850 5745099463").split()))
+OWNER_ID = list(map(int, getenv("OWNER_ID", "5145609515 5563222923").split()))
 
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
@@ -40,14 +40,14 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/ZZZ7iZ/AlexaMusic",
+    "https://github.com/king-1-9/AlexaMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/H_M_Dr/45")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/h_m_dr")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/EF_19/7")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/EF_19")
 MUST_JOIN = getenv("MUST_JOIN", None)
 
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
@@ -76,15 +76,15 @@ VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "3"))
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "30"))
 
 CHANNEL_SUDO = getenv(
-    "CHANNEL_SUDO", "H_M_Dr"
+    "CHANNEL_SUDO", "EF_19"
 )  # معرف قناتك بدون @
 
 YAFA_NAME = getenv(
-    "YAFA_NAME", "‹ سورس نيكست ›"
+    "YAFA_NAME", "‹ سورس الملك ›"
 )  # اسم قناتك
 
 YAFA_CHANNEL = getenv(
-   " YAFA_CHANNEL", "https://t.me/H_M_Dr"
+   " YAFA_CHANNEL", "https://t.me/EF_19"
 )  # رابط قناتك
 
 PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "25"))
