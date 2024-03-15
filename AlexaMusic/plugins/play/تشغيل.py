@@ -7,15 +7,7 @@ from AlexaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, ap
 from AlexaMusic import app
 from AlexaMusic.utils.database import get_assistant
 
-@app.on_message(filters.voice_chat_started)
-async def stcall(client: Client, message: Message): 
-      Startt = "تم بدأ محادثه صوتيه"
-      await message.reply_text(Startt)
 
-@app.on_message(filters.voice_chat_ended)
-async def encall(client: Client, message: Message): 
-      Enddd = "تم إغلاق المحادثه الصوتيه"
-      await message.reply_text(Enddd)
 
 @app.on_message(filters.voice_chat_members_invited)
 async def zoharyy(client: Client, message: Message): 
