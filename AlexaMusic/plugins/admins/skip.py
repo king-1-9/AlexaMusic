@@ -25,7 +25,7 @@ SKIP_COMMAND = get_command("SKIP_COMMAND")
 
 
 @app.on_message(
-    command(SKIP_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+    command(SKIP_COMMAND) & filters.group & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def skip(cli, message: Message, _, chat_id):
