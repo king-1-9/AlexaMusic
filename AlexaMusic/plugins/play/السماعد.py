@@ -24,7 +24,6 @@ load_dotenv()
 ASS_US = getenv("ASS_US")
 ASS_ID = getenv("ASS_ID")
 
-
 def get_file_id(msg: Message):
     if msg.media:
         for message_type in (
@@ -46,8 +45,6 @@ def get_file_id(msg: Message):
             if obj:
                 setattr(obj, "message_type", message_type)
                 return obj
-
-
 
 @app.on_message(
     command(["انضم","الحساب المساعد","حساب مساعد"])
