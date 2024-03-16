@@ -9,7 +9,7 @@ from pyrogram.types import InlineKeyboardButton
 
 from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
 from AlexaMusic import app
-from config
+from config import BANNED_USERS, MUSIC_BOT_NAME
 from AlexaMusic.misc import SUDOERS
 
 import re
@@ -54,19 +54,19 @@ async def khalid(client: Client, message: Message):
     usr = await client.get_users(AS_ID)
     name = usr.first_name
     async for photo in client.iter_profile_photos(AS_ID, limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""❲ معلومات الحساب المساعد ❳
+        await message.reply_photo(photo.file_id, caption=f"""❲ معلومات الحساب المساعد ❳
 — — — — — — — — —
 - اسم الحساب المساعد : [{usr.first_name}](https://t.me/{AS_US})
 - يوزر الحساب المساعد : @{AS_US}""", 
-        reply_markup=InlineKeyboardMarkup(
-            [
+            reply_markup=InlineKeyboardMarkup(
                 [
-                    InlineKeyboardButton(
-                        name, url=f"tg://user?id={AS_ID}")
-                ],[
-                    InlineKeyboardButton(
-                        "࿈ ضيف الحساب المساعد لمجموعتك .", url=f"https://t.me/{AS_US}?startgroup=true"),
-                ],
-            ]
-        ),
-    )
+                    [
+                        InlineKeyboardButton(
+                            name, url=f"tg://user?id={AS_ID}")
+                    ],[
+                        InlineKeyboardButton(
+                            "࿈ ضيف الحساب المساعد لمجموعتك .", url=f"https://t.me/{AS_US}?startgroup=true"),
+                    ],
+                ]
+            ),
+        )
