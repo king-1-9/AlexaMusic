@@ -44,7 +44,7 @@ class Userbot(Client):
             assistants.append(1)
         try:
             await self.send_message(
-                config.LOG_GROUP_ID, "» ᴍᴜsɪᴄ ʙᴏᴛ sᴛᴀʀᴛᴇᴅ, ᴡᴀɪᴛɪɴɢ ғᴏʀ ᴀssɪsᴛᴀɴᴛ..."
+                config.LOG_GROUP_ID, "『 تم تشغيل البوت على سورس الملك 』"
             )
         except:
             LOGGER(__name__).error(
@@ -59,4 +59,4 @@ class Userbot(Client):
             self.name = get_me.first_name + " " + get_me.last_name
         else:
             self.name = get_me.first_name
-        LOGGER(__name__).info(f"MusicBot Started as {self.name}")
+        LOGGER(__name__).info(f"تم تنصيب بوت {self.name} على سورس الملك")
