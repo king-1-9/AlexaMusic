@@ -12,6 +12,8 @@ from dotenv import load_dotenv
 from pyrogram import filters
 
 load_dotenv()
+ASS_US = getenv("ASS_US")
+ASS_ID = getenv("ASS_ID")
 
 API_ID = int(getenv("API_ID", ""))
 API_HASH = getenv("API_HASH")
