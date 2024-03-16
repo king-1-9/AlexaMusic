@@ -41,7 +41,7 @@ class Userbot(Client):
             await self.join_chat("jnssghb")
         except:
             pass
-            assistants.append(1)
+        assistants.append(1)
         try:
             await self.send_message(
                 config.LOG_GROUP_ID, "『 تم تشغيل البوت على سورس الملك 』"
