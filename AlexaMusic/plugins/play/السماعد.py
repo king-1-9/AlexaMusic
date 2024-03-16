@@ -7,9 +7,7 @@ from AlexaMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, ap
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
 
-from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
-from AlexaMusic import app
-from config import BANNED_USERS, MUSIC_BOT_NAME
+from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP, BANNED_USERS, MUSIC_BOT_NAME
 from AlexaMusic.misc import SUDOERS
 
 import re
@@ -17,7 +15,6 @@ import sys
 from os import getenv
 
 from dotenv import load_dotenv
-from pyrogram import filters
 
 load_dotenv()
 
@@ -51,22 +48,28 @@ def get_file_id(msg: Message):
     & filters.group
 )
 async def khalid(client: Client, message: Message):
-    usr = await client.get_users(ASS_ID)
+    usr = await client.get_users(int(ASS_ID))
     name = usr.first_name
-    async for photo in client.iter_profile_photos(ASS_ID, limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""❲ معلومات الحساب المساعد ❳
+    async for photo in client.iter_profile_photos(int(ASS_ID), limit=1):
+        await message.reply_photo(
+            photo.file_id,
+            caption=f"""❲ معلومات الحساب المساعد ❳
 — — — — — — — — —
 - اسم الحساب المساعد : [{usr.first_name}](https://t.me/{ASS_US})
-- يوزر الحساب المساعد : @{ASS_US}""", 
-        reply_markup=InlineKeyboardMarkup(
-            [
+- يوزر الحساب المساعد : @{ASS_US}""",
+            reply_markup=InlineKeyboardMarkup(
                 [
-                    InlineKeyboardButton(
-                        name, url=f"tg://user?id={ASS_ID}")
-                ],[
-                    InlineKeyboardButton(
-                        "࿈ ضيف الحساب المساعد لمجموعتك .", url=f"https://t.me/{ASS_US}?startgroup=true"),
-                ],
-            ]
-        ),
-    )
+                    [
+                        InlineKeyboardButton(
+                            name, url=f"tg://user?id={ASS_ID}"
+                        )
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            "࿈ ضيف الحساب المساعد لمجموعتك .",
+                            url=f"https://t.me/{ASS_US}?startgroup=true",
+                        ),
+                    ],
+                ]
+            ),
+        )
