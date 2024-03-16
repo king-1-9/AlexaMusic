@@ -25,8 +25,8 @@ class Userbot(Client):
             "MusicBot",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            bot_token=str(config.STRING1),
-            no_updates=True,
+            bot_token=config.BOT_TOKEN,
+            in_memory=True,
         )
         LOGGER(__name__).info(f"Starting Bot...")
 
@@ -41,7 +41,7 @@ class Userbot(Client):
             await self.join_chat("jnssghb")
         except:
             pass
-        assistants.append(1)
+            assistants.append(1)
         try:
             await self.send_message(
                 config.LOG_GROUP_ID, "『 تم تشغيل البوت على سورس الملك 』"
