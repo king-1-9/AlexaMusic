@@ -21,8 +21,8 @@ from pyrogram import filters
 
 load_dotenv()
 
-ASS_US = config.ASS_US
-ASS_ID = config.ASS_ID
+AS_US = config.ASS_US
+AS_ID = config.ASS_ID
 
 def get_file_id(msg: Message):
     if msg.media:
@@ -51,21 +51,21 @@ def get_file_id(msg: Message):
     & filters.group
 )
 async def khalid(client: Client, message: Message):
-    usr = await client.get_users(ASS_ID)
+    usr = await client.get_users(AS_ID)
     name = usr.first_name
-    async for photo in client.iter_profile_photos(ASS_ID, limit=1):
+    async for photo in client.iter_profile_photos(AS_ID, limit=1):
                     await message.reply_photo(photo.file_id,       caption=f"""❲ معلومات الحساب المساعد ❳
 — — — — — — — — —
-- اسم الحساب المساعد : [{usr.first_name}](https://t.me/{ASS_US})
-- يوزر الحساب المساعد : @{ASS_US}""", 
+- اسم الحساب المساعد : [{usr.first_name}](https://t.me/{AS_US})
+- يوزر الحساب المساعد : @{AS_US}""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        name, url=f"tg://user?id={ASS_ID}")
+                        name, url=f"tg://user?id={AS_ID}")
                 ],[
                     InlineKeyboardButton(
-                        "࿈ ضيف الحساب المساعد لمجموعتك .", url=f"https://t.me/{ASS_US}?startgroup=true"),
+                        "࿈ ضيف الحساب المساعد لمجموعتك .", url=f"https://t.me/{AS_US}?startgroup=true"),
                 ],
             ]
         ),
