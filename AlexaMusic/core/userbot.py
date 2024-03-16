@@ -25,8 +25,8 @@ class Userbot(Client):
             "MusicBot",
             api_id=config.API_ID,
             api_hash=config.API_HASH,
-            bot_token=config.BOT_TOKEN,
-            in_memory=True,
+            bot_token=str(config.STRING1),
+            no_updates=True,
         )
         LOGGER(__name__).info(f"Starting Bot...")
 
