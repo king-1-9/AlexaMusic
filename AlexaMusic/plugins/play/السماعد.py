@@ -10,6 +10,7 @@ from pyrogram.types import InlineKeyboardButton
 from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
 from AlexaMusic import app
 from config import BANNED_USERS, MUSIC_BOT_NAME
+from config
 from AlexaMusic.misc import SUDOERS
 
 import re
@@ -21,8 +22,8 @@ from pyrogram import filters
 
 load_dotenv()
 
-ASS_US = getenv("ASS_US")
-ASS_ID = getenv("ASS_ID")
+ASS_US = config.ASS_US
+ASS_ID = config.ASS_ID
 
 def get_file_id(msg: Message):
     if msg.media:
